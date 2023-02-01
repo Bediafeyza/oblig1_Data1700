@@ -1,11 +1,12 @@
 Oblig 1
 =======
-OsloMet brukernavn: 
+OsloMet brukernavn: s375145
 
-GitHub brukernavn: 
+GitHub brukernavn: BediaFeyza
 
-Github repo URL: 
+Github repo URL: https://github.com/data1700-v23/oblig-1-Bediafeyza.git
 
-Fullt navn: 
+Fullt navn: Bedia Feyza Yesiltoklu
 
 Kort beskrivelse av applikasjon (5-10 setninger):
+Oppsummering kommer her. 
