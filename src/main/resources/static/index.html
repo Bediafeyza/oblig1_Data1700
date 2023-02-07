@@ -2,32 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kino</title>
+    <title>Bestill kinobilletter</title>
+    <script src="./index.js"></script>
+
 </head>
 <body>
-<form>
-<h1>Bestilling av kinobiletter</h1>
 
-<div class="dropdown">
-    <p>Velg film:</p>
-    <select id="list">
-    <option value="Valg">-Velg film her-</option>
-    <option value="kby">Kardemomme by</option>
-    <option value="titanic">Titanic</option>
-    <option value="Holy Spider">Holy Spider</option>
-    <option value="Panther">The Black Panthers</option>
+<h1>Bestilling av kinobilletter</h1>
+
+<form id="reset">
+    Velg film: <select id="velgFilm">
+    <option value="valg">-Velg film her-</option>
+    <option>Kardemomme by</option>
+    <option>The Holy Spider</option>
+    <option>Titanic</option>
+    <option>The Black Panthers</option>
 </select>
-</div>
-<p>Antall:
-    <input type = "text" size="2"</p>
+
+    <td><span id="ikkeValgtFilm" style="color:red"></span><br/></td>
+
+        <p>Antall
+        <td><input type="text" id="antall" size=2>
+            <span id="antallError" style="color:red"></span></td>
+
+    <table>
+    <tr>
+        <td>Fornavn</td>
+        <td><input type="text" id="fornavn" size=20>
+            <span id="fornavnError" style="color:red"></span></td>
+    </tr>
+    <tr>
+        <td>Etternavn</td>
+        <td><input type="text" id="etternavn" size=20>
+            <span id="etternavnError" style="color:red"></span></td>
+    </tr>
+    <tr>
+        <td>Telefonnr</td>
+        <td><input type="text" id="telefonnr" size=20>
+            <span id="telefonnrError" style="color:red"></span></td>
+    </tr>
+    <tr>
+        <td>Epost</td>
+        <td><input type="text" id="epost" size=20>
+            <span id="epostError" style="color:red"></span></td>
+    </tr>
+    </table>
 </form>
 
-<script>
-    function getSelectValue()
-    {
-        let selectedValue = document.getElementById("list")
-    }
+<button onclick="billettKjop();">Kjøp billett</button>
 
-</script>
+<h2>Alle billetter</h2>
+
+<div id="kinoBilletter"> </div>
+
+<button onclick="slett();">Slett alle billetter</button>
+
 </body>
 </html>
