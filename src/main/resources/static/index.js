@@ -12,30 +12,30 @@ function billettKjop() {
 
     let errorCount= false;
 
-    // Antall
-    if ((isNaN(enBillett.antall) || enBillett.antall <= 0) || enBillett.antall === null) {
+    // Antall-felt
+    if ((isNaN(enBillett.antall) || enBillett.antall <= 0)) {
         document.getElementById("antallError").innerHTML = "Må skrive noe inn i antall";
         errorCount = true;
     } else {
         document.getElementById("antallError").innerHTML = "";
     }
-    // Fornavn
-    if (!isNaN(enBillett.fornavn) || enBillett.fornavn === "") {
+    // Fornavn-felt
+    if (!isNaN(enBillett.fornavn)) {
         document.getElementById("fornavnError").innerHTML = "Må skrive noe inn i fornavnet";
         errorCount = true;
     } else {
         document.getElementById("fornavnError").innerHTML = "";
     }
 
-    //Etternavn
-    if (!isNaN(enBillett.etternavn) || enBillett.etternavn === "") {
+    //Etternavn-felt
+    if (!isNaN(enBillett.etternavn)) {
         document.getElementById("etternavnError").innerHTML = "Må skrive noe inn i etternavnet";
         errorCount = true;
     } else {
         document.getElementById("etternavnError").innerHTML = "";
     }
 
-    // Telefonnr
+    // Telefonnr-felt
     if (isNaN(enBillett.telefonnr) || enBillett.telefonnr === "") {
         document.getElementById("telefonnrError").innerHTML = "Må skrive noe inn i telefonnr";
         errorCount= true;
@@ -43,23 +43,23 @@ function billettKjop() {
         document.getElementById("telefonnrError").innerHTML = "";
     }
 
-    // E-post
-    if (!isNaN(enBillett.epost) || enBillett.epost === "") {
+    // E-post-felt
+    if (!isNaN(enBillett.epost)) {
         document.getElementById("epostError").innerHTML = "Må skrive noe inn i e-post";
         errorCount= true;
     } else {
         document.getElementById("epostError").innerHTML = "";
     }
 
-    // Tømmer feltene automatisk
+    // Blanker ut feltene
     if (errorCount === false) {
         document.getElementById("reset").reset();
     } else {
         return;
     }
 
-    // Tomme og fulle input-felt
-    if (kinoBilletter.antall === "" && kinoBilletter.film === "feilFilm" && kinoBilletter.etternavn === "" &&
+    //Billett
+    if (kinoBilletter.film === "" && kinoBilletter.antall === "" && kinoBilletter.fornavn === "" && kinoBilletter.etternavn === "" &&
         kinoBilletter.telefonnr === "" && kinoBilletter.epost === "") {
         return;
     } else {
@@ -81,6 +81,7 @@ function billettKjop() {
     document.getElementById("kinoBilletter").innerHTML = ut;
 }
 
+//Sletter billett
 function slett() {
     document.getElementById("kinoBilletter").innerHTML = "";
 

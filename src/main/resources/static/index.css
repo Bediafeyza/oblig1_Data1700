@@ -1,1 +1,19 @@
-/*Formatering av tabellen*/
+/*Farge på feilmeldinger*/
+#antallError{
+    color: red;
+}
+#antallError{
+    color: red;
+}
+#fornavnError{
+    color: red;
+}
+#etternavnError{
+    color: red;
+}
+#telefonnrError{
+    color: red;
+}
+#epostError{
+    color: red;
+}

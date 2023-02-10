@@ -9,4 +9,5 @@ Github repo URL: https://github.com/data1700-v23/oblig-1-Bediafeyza.git
 Fullt navn: Bedia Feyza Yesiltoklu
 
 Kort beskrivelse av applikasjon (5-10 setninger):
-Oppsummering kommer her. 
+Oppsummering kommer her
+Html-filen
