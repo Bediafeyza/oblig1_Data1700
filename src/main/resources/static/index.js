@@ -2,8 +2,8 @@ let kinoBilletter = [];
 
 function billettKjop() {
     let enBillett = {
-        antall: document.getElementById('antall').value,
         film: document.getElementById('velgFilm').value,
+        antall: document.getElementById('antall').value,
         fornavn: document.getElementById('fornavn').value,
         etternavn: document.getElementById('etternavn').value,
         telefonnr: document.getElementById('telefonnr').value,
@@ -17,14 +17,14 @@ function billettKjop() {
         document.getElementById("antallError").innerHTML = "Må skrive noe inn i antall";
         errorCount = true;
     } else {
-        document.getElementById("antallError").innerHTML = "";
+        document.getElementById("antall").innerHTML = "";
     }
     // Fornavn-felt
     if (!isNaN(enBillett.fornavn)) {
         document.getElementById("fornavnError").innerHTML = "Må skrive noe inn i fornavnet";
         errorCount = true;
     } else {
-        document.getElementById("fornavnError").innerHTML = "";
+        document.getElementById("fornavn").innerHTML = "";
     }
 
     //Etternavn-felt
@@ -32,7 +32,7 @@ function billettKjop() {
         document.getElementById("etternavnError").innerHTML = "Må skrive noe inn i etternavnet";
         errorCount = true;
     } else {
-        document.getElementById("etternavnError").innerHTML = "";
+        document.getElementById("etternavn").innerHTML = "";
     }
 
     // Telefonnr-felt
@@ -40,7 +40,7 @@ function billettKjop() {
         document.getElementById("telefonnrError").innerHTML = "Må skrive noe inn i telefonnr";
         errorCount= true;
     } else {
-        document.getElementById("telefonnrError").innerHTML = "";
+        document.getElementById("telefonnr").innerHTML = "";
     }
 
     // E-post-felt
@@ -48,7 +48,7 @@ function billettKjop() {
         document.getElementById("epostError").innerHTML = "Må skrive noe inn i e-post";
         errorCount= true;
     } else {
-        document.getElementById("epostError").innerHTML = "";
+        document.getElementById("epost").innerHTML = "";
     }
 
     // Blanker ut feltene
@@ -66,8 +66,6 @@ function billettKjop() {
         kinoBilletter.push(enBillett)
     }
 
-
-
     //Skriver ut billetten
     let ut = "<table><tr>" +
         "<th>Film</th><th>Antall</th><th>Fornavn</th><th>Etternavn</th>" +
@@ -84,5 +82,4 @@ function billettKjop() {
 //Sletter billett
 function slett() {
     document.getElementById("kinoBilletter").innerHTML = "";
-
 }
